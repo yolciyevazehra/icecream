@@ -1,0 +1,603 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link href="src/output.css" rel="stylesheet">
+    <title>Romyk</title>
+    <style>
+        header {
+            background: url(img/banner-bg.png);
+            width: 100%;
+            float: left;
+            height: auto;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            display: flex;
+        }
+
+        .swiper-pagination-bullet {
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            font-size: 12px;
+            color: #000;
+            opacity: 1;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .swiper-pagination-bullet-active {
+            color: #fff;
+            background: #fc95c4;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            background: #fc95c4;
+            width: 40px !important;
+            height: 40px !important;
+            transition: background 0.3s ease;
+        }
+
+        .swiper-button-next:hover,
+        .swiper-button-prev:hover {
+            background: #e07fa3;
+        }
+
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+            font-size: 16px !important;
+            color: white !important;
+            font-weight: bold;
+        }
+
+        .swiper-button-next {
+            right: 0px !important;
+            color: white !important;
+        }
+
+        .swiper-button-prev {
+            left: 0px !important;
+            color: white !important;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container mx-auto">
+            <div class="desktop-menu h-20 hidden lg:flex items-center justify-around mx-auto max-w-7xl w-full px-6">
+                <div class="flex items-center gap-8">
+                    <div class="logo w-32 shrink-0">
+                        <a href="">
+                            <img src="img/logo.png" alt="Romyk">
+                        </a>
+                    </div>
+                </div>
+                <div class="pt-4">
+                    <ul class="flex items-center gap-6 text-[20px]">
+                        <li><a href="" class="hover:text-[#fc95c4] text-[#fc95c4] pb-6.5 mt-1 inline-block">Home</a>
+                        </li>
+                        <li><a href="" class="hover:text-[#fc95c4] pb-6.5 mt-1 inline-block transition">About</a></li>
+                        <li><a href="" class="hover:text-[#fc95c4] pb-6.5 mt-1 inline-block transition">Icecream</a>
+                        </li>
+                        <li><a href="" class="hover:text-[#fc95c4] pb-6.5 mt-1 inline-block transition">Services</a>
+                        </li>
+                        <li><a href="" class="hover:text-[#fc95c4] pb-6.5 mt-1 inline-block transition">Blog</a></li>
+                        <li><a href="" class="hover:text-[#fc95c4] pb-6.5 mt-1 inline-block transition">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex items-center gap-5 text-lg">
+                    <a href="" class="hover:text-[#fc95c4]">Login<i class="fa-solid fa-user"></i></a>
+                </div>
+                <div class="flex items-center gap-5 text-lg">
+                    <a href="" class="hover:text-[#fc95c4]"><i class="fa-solid fa-magnifying-glass"></i></a>
+                </div>
+            </div>
+            <div class="mobil-menu h-16 lg:hidden flex items-center justify-between px-4">
+                <div class="logo w-28">
+                    <img src="img/logo.png" alt="Romyk">
+                </div>
+                <a href="" class="text-lg p-1"><i class="fa-solid fa-bars"></i></a>
+            </div>
+            <div class="container mx-auto flex items-center justify-center my-2 lg:p-[80px] p-[30px]">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide flex items-center justify-between flex-col lg:flex-row p-5">
+                            <div class="flex flex-col items-left justify-around p-5">
+                                <h2 class="text-4xl font-semibold">Ice Cream</h2>
+                                <p class="text-black py-5">It is a long established fact that a reader will be
+                                    distracted by the
+                                    readable content of a page when looking at its layout. The point of using Lorem</p>
+                                <p class="inline-block"><a href=""
+                                        class="bg-[#fc95c4] py-2 px-5 text-white rounded-xl hover:bg-[#faf8f9] hover:text-black">Order
+                                        Now</a></p>
+                            </div>
+                            <div class="max-w-full">
+                                <img src="img/banner-img.png" class="max-w-full h-auto" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide flex items-center justify-between flex-col lg:flex-row p-5">
+                            <div class="flex flex-col items-left justify-around p-5">
+                                <h2 class="text-4xl font-semibold">Ice Cream</h2>
+                                <p class="text-black py-5">It is a long established fact that a reader will be
+                                    distracted by the
+                                    readable content of a page when looking at its layout. The point of using Lorem</p>
+                                <p class="inline-block"><a href=""
+                                        class="bg-[#fc95c4] py-2 px-5 text-white rounded-xl hover:bg-[#faf8f9] hover:text-black">Order
+                                        Now</a></p>
+                            </div>
+                            <div class="max-w-full">
+                                <img src="img/banner-img.png" class="max-w-full h-auto" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide flex items-center justify-between flex-col lg:flex-row p-5">
+                            <div class="flex flex-col items-left justify-around p-5">
+                                <h2 class="text-4xl font-semibold">Ice Cream</h2>
+                                <p class="text-black py-5">It is a long established fact that a reader will be
+                                    distracted by the
+                                    readable content of a page when looking at its layout. The point of using Lorem</p>
+                                <p class="inline-block"><a href=""
+                                        class="bg-[#fc95c4] py-2 px-5 text-white rounded-xl hover:bg-[#faf8f9] hover:text-black">Order
+                                        Now</a></p>
+                            </div>
+                            <div class="max-w-full">
+                                <img src="img/banner-img.png" class="max-w-full h-auto" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide flex items-center justify-between flex-col lg:flex-row p-5">
+                            <div class="flex flex-col items-left justify-around p-5">
+                                <h2 class="text-4xl font-semibold">Ice Cream</h2>
+                                <p class="text-black py-5">It is a long established fact that a reader will be
+                                    distracted by the
+                                    readable content of a page when looking at its layout. The point of using Lorem</p>
+                                <p class="inline-block"><a href=""
+                                        class="bg-[#fc95c4] py-2 px-5 text-white rounded-xl hover:bg-[#faf8f9] hover:text-black">Order
+                                        Now</a></p>
+                            </div>
+                            <div class="max-w-full">
+                                <img src="img/banner-img.png" class="max-w-full h-auto" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div
+                class="container mx-auto flex flex-col-reverse md:flex-row justify-center items-center gap-4 py-4 px-6 md:px-[60px] my-[50px]">
+                <div class="mt-4 max-w-full">
+                    <img src="img/about-img.png" class="max-w-full h-auto" alt="">
+                </div>
+                <div class="flex flex-col items-left w-full max-w-[600px] justify-around p-5">
+                    <div class="flex flex-row items-center">
+                        <h2 class="text-4xl font-semibold whitespace-nowrap">About Icecream</h2>
+                        <hr
+                            class="border-[#ffd6e1] ml-[20px] md:ml-[50px] mt-[28px] w-[90px] border-[3.5px] rounded-md" />
+                    </div>
+                    <p class="text-black py-[40px]">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                        ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                        esse cillum dolore euconsectetur adipiscing esequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu</p>
+                    <p class="inline-block"><a href=""
+                            class="bg-[#fc95c4] py-3 hover:bg-black transition px-[50px] text-white rounded-xl">Read
+                            More</a></p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div
+                class="container mx-auto flex items-center flex-col my-[100px] justify-center py-5 px-6 md:px-[60px] w-full max-w-7xl">
+                <div class="flex flex-col items-left w-full max-w-[600px] lg:mr-[500px] justify-around p-5">
+                    <div class="flex flex-row items-center">
+                        <h2 class="text-4xl font-semibold">Our Featured Ice Cream</h2>
+                        <hr
+                            class="border-[#ffd6e1] ml-[20px] md:ml-[50px] mt-[28px] w-[90px] border-[3.5px] rounded-md" />
+                    </div>
+                    <p class="mt-2">tempor incididunt ut labore et dolore magna aliqua</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center w-full">
+                    <div class="relative shadow-2xl w-full max-w-[350px]">
+                        <div
+                            class="bg-[#f2f2f0] h-[300px] w-full p-5 hover:bg-[#faf0c7] flex items-center justify-center">
+                            <img src="img/img-1.png" class="max-w-full h-auto object-contain" alt="">
+                        </div>
+                        <div class="bg-white h-[150px] w-full py-5 flex flex-col items-center justify-center">
+                            <h3 class="text-2xl font-semibold text-center px-2">Strawberry Ice Cream</h3>
+                            <p class="inline-block mt-[30px]"><a href=""
+                                    class="border-2 py-2 px-[50px] border-[#fc95c4] text-[#fc95c4] hover:border-black hover:text-black !rounded-[50px]">Add
+                                    To Cart</a></p>
+                        </div>
+                        <div class="absolute bottom-[110px] left-1/2 -translate-x-1/2">
+                            <p
+                                class="inline-block rounded-[50%] h-[80px] w-[80px] text-3xl font-semibold text-center pt-4 bg-white shadow">
+                                $10</p>
+                        </div>
+                    </div>
+                    <div class="relative shadow-2xl w-full max-w-[350px]">
+                        <div
+                            class="bg-[#f2f2f0] h-[300px] w-full p-5 hover:bg-[#faf0c7] flex items-center justify-center">
+                            <img src="img/img-2.png" class="max-w-full h-auto object-contain" alt="">
+                        </div>
+                        <div class="bg-white h-[150px] w-full py-5 flex flex-col items-center justify-center">
+                            <h3 class="text-2xl font-semibold text-center px-2">Strawberry Ice Cream</h3>
+                            <p class="inline-block mt-[30px]"><a href=""
+                                    class="border-2 py-2 px-[50px] border-[#fc95c4] text-[#fc95c4] hover:border-black hover:text-black !rounded-[50px]">Add
+                                    To Cart</a></p>
+                        </div>
+                        <div class="absolute bottom-[110px] left-1/2 -translate-x-1/2">
+                            <p
+                                class="inline-block rounded-[50%] h-[80px] w-[80px] text-3xl font-semibold text-center pt-4 bg-white shadow">
+                                $10</p>
+                        </div>
+                    </div>
+                    <div class="relative shadow-2xl w-full max-w-[350px]">
+                        <div
+                            class="bg-[#f2f2f0] h-[300px] w-full p-5 hover:bg-[#faf0c7] flex items-center justify-center">
+                            <img src="img/img-1.png" class="max-w-full h-auto object-contain" alt="">
+                        </div>
+                        <div class="bg-white h-[150px] w-full py-5 flex flex-col items-center justify-center">
+                            <h3 class="text-2xl font-semibold text-center px-2">Strawberry Ice Cream</h3>
+                            <p class="inline-block mt-[30px]"><a href=""
+                                    class="border-2 py-2 px-[50px] border-[#fc95c4] text-[#fc95c4] hover:border-black hover:text-black !rounded-[50px]">Add
+                                    To Cart</a></p>
+                        </div>
+                        <div class="absolute bottom-[110px] left-1/2 -translate-x-1/2">
+                            <p
+                                class="inline-block rounded-[50%] h-[80px] w-[80px] text-3xl font-semibold text-center pt-4 bg-white shadow">
+                                $10</p>
+                        </div>
+                    </div>
+                    <div class="relative shadow-2xl w-full max-w-[350px]">
+                        <div
+                            class="bg-[#f2f2f0] h-[300px] w-full p-5 hover:bg-[#faf0c7] flex items-center justify-center">
+                            <img src="img/img-3.png" class="max-w-full h-auto object-contain" alt="">
+                        </div>
+                        <div class="bg-white h-[150px] w-full py-5 flex flex-col items-center justify-center">
+                            <h3 class="text-2xl font-semibold text-center px-2">Strawberry Ice Cream</h3>
+                            <p class="inline-block mt-[30px]"><a href=""
+                                    class="border-2 py-2 px-[50px] border-[#fc95c4] text-[#fc95c4] hover:border-black hover:text-black !rounded-[50px]">Add
+                                    To Cart</a></p>
+                        </div>
+                        <div class="absolute bottom-[110px] left-1/2 -translate-x-1/2">
+                            <p
+                                class="inline-block rounded-[50%] h-[80px] w-[80px] text-3xl font-semibold text-center pt-4 bg-white shadow">
+                                $10</p>
+                        </div>
+                    </div>
+                    <div class="relative shadow-2xl w-full max-w-[350px]">
+                        <div
+                            class="bg-[#f2f2f0] h-[300px] w-full p-5 hover:bg-[#faf0c7] flex items-center justify-center">
+                            <img src="img/img-4.png" class="max-w-full h-auto object-contain" alt="">
+                        </div>
+                        <div class="bg-white h-[150px] w-full py-5 flex flex-col items-center justify-center">
+                            <h3 class="text-2xl font-semibold text-center px-2">Strawberry Ice Cream</h3>
+                            <p class="inline-block mt-[30px]"><a href=""
+                                    class="border-2 py-2 px-[50px] border-[#fc95c4] text-[#fc95c4] hover:border-black hover:text-black !rounded-[50px]">Add
+                                    To Cart</a></p>
+                        </div>
+                        <div class="absolute bottom-[110px] left-1/2 -translate-x-1/2">
+                            <p
+                                class="inline-block rounded-[50%] h-[80px] w-[80px] text-3xl font-semibold text-center pt-4 bg-white shadow">
+                                $10</p>
+                        </div>
+                    </div>
+                    <div class="relative shadow-2xl w-full max-w-[350px]">
+                        <div
+                            class="bg-[#f2f2f0] h-[300px] w-full p-5 hover:bg-[#faf0c7] flex items-center justify-center">
+                            <img src="img/img-5.png" class="max-w-full h-auto object-contain" alt="">
+                        </div>
+                        <div class="bg-white h-[150px] w-full py-5 flex flex-col items-center justify-center">
+                            <h3 class="text-2xl font-semibold text-center px-2">Strawberry Ice Cream</h3>
+                            <p class="inline-block mt-[30px]"><a href=""
+                                    class="border-2 py-2 px-[50px] border-[#fc95c4] text-[#fc95c4] hover:border-black hover:text-black !rounded-[50px]">Add
+                                    To Cart</a></p>
+                        </div>
+                        <div class="absolute bottom-[110px] left-1/2 -translate-x-1/2">
+                            <p
+                                class="inline-block rounded-[50%] h-[80px] w-[80px] text-3xl font-semibold text-center pt-4 bg-white shadow">
+                                $10</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-[50px] flex justify-center w-full">
+                    <p class="inline-block"><a href=""
+                            class="bg-[#fc95c4] py-3 hover:bg-black transition px-[50px] text-white rounded-xl">See
+                            More</a></p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container mx-auto px-6 w-full max-w-7xl">
+                <div class="flex flex-col items-left w-full max-w-[600px] mx-auto md:ml-[100px] justify-around p-5">
+                    <div class="flex flex-row items-center">
+                        <h2 class="text-4xl font-semibold">Our Featured Ice Cream</h2>
+                        <hr
+                            class="border-[#ffd6e1] ml-[20px] md:ml-[50px] mt-[28px] w-[90px] border-[3.5px] rounded-md" />
+                    </div>
+                    <p class="mt-2">tempor incididunt ut labore et dolore magna aliqua</p>
+                </div>
+                <div class="flex flex-col lg:flex-row items-center justify-center gap-[20px] lg:gap-[30px] w-full">
+                    <div
+                        class="border-2 border-[#fc95c4] flex flex-col items-left py-4 px-[20px] w-full max-w-[500px] lg:max-w-[340px]">
+                        <div class="flex flex-row items-center">
+                            <img src="img/icon-1.png" alt="">
+                            <p class="text-lg ml-2">Cookies Ice Cream</p>
+                        </div>
+                        <p class="mt-3">commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                            esse cillum dolore eu fat</p>
+                    </div>
+                    <div
+                        class="border-2 border-[#fc95c4] flex flex-col items-left py-4 px-[20px] w-full max-w-[500px] lg:max-w-[340px]">
+                        <div class="flex flex-row items-center">
+                            <img src="img/icon-2.png" alt="">
+                            <p class="text-lg ml-2">Cookies Ice Cream</p>
+                        </div>
+                        <p class="mt-3">commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                            esse cillum dolore eu fat</p>
+                    </div>
+                    <div
+                        class="border-2 border-[#fc95c4] flex flex-col items-left py-4 px-[20px] w-full max-w-[500px] lg:max-w-[340px]">
+                        <div class="flex flex-row items-center">
+                            <img src="img/icon-1.png" alt="">
+                            <p class="text-lg ml-2">Cookies Ice Cream</p>
+                        </div>
+                        <p class="mt-3">commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                            esse cillum dolore eu fat</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-[50px] flex justify-center w-full">
+                <p class="inline-block"><a href=""
+                        class="bg-[#fc95c4] py-3 hover:bg-black transition px-[50px] text-white rounded-xl">Read
+                        More</a></p>
+            </div>
+        </section>
+        <section>
+            <h2 class="text-4xl font-semibold mt-[100px] mb-[50px] text-center">Testimonial</h2>
+            <div class="flex flex-row items-center justify-around px-4 max-w-7xl mx-auto">
+                <div class="hidden md:block shrink-0">
+                    <img src="img/quick-icon.png" class="w-[100px]" alt="">
+                </div>
+                <div class="w-full lg:w-1/2 min-h-[350px] max-w-[650px] relative">
+                    <div class="swiper mySwiper !pb-10">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="flex flex-col relative items-center w-full">
+                                    <div
+                                        class="bg-white flex items-center flex-col shadow-2xl w-full p-6 px-10 md:px-16 text-center rounded-lg min-h-[28px]">
+                                        <p class="mt-[30px] text-gray-600 leading-relaxed">
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                            cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                                        </p>
+                                        <p class="text-xl font-bold mt-4 mb-12">Marri Fen</p>
+                                        <div class="absolute -bottom-[60px] left-1/2 -translate-x-1/2 z-10">
+                                            <img src="img/client-img.png"
+                                                class="w-[130px] h-[130px] object-cover shadow-md rounded-full" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="flex flex-col relative items-center w-full">
+                                    <div
+                                        class="bg-white flex items-center flex-col shadow-2xl w-full p-6 px-10 md:px-16 text-center rounded-lg min-h-[28px]">
+                                        <p class="mt-[30px] text-gray-600 leading-relaxed">
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                            cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                                        </p>
+                                        <p class="text-xl font-bold mt-4 mb-12">Marri Fen</p>
+                                        <div class="absolute -bottom-[60px] left-1/2 -translate-x-1/2 z-10">
+                                            <img src="img/client-img.png"
+                                                class="w-[130px] h-[130px] object-cover shadow-md rounded-full" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="flex flex-col relative items-center w-full">
+                                    <div
+                                        class="bg-white flex items-center flex-col shadow-2xl w-full p-6 px-10 md:px-16 text-center rounded-lg min-h-[28px]">
+                                        <p class="mt-[30px] text-gray-600 leading-relaxed">
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                            cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                                        </p>
+                                        <p class="text-xl font-bold mt-4 mb-12">Marri Fen</p>
+                                        <div class="absolute -bottom-[60px] left-1/2 -translate-x-1/2 z-10">
+                                            <img src="img/client-img.png"
+                                                class="w-[130px] h-[130px] object-cover shadow-md rounded-full" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="flex flex-col relative items-center w-full">
+                                    <div
+                                        class="bg-white flex items-center flex-col shadow-2xl w-full p-6 px-10 md:px-16 text-center rounded-lg min-h-[28px]">
+                                        <p class="mt-[30px] text-gray-600 leading-relaxed">
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                            cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                                        </p>
+                                        <p class="text-xl font-bold mt-4 mb-12">Marri Fen</p>
+                                        <div class="absolute -bottom-[60px] left-1/2 -translate-x-1/2 z-10">
+                                            <img src="img/client-img.png"
+                                                class="w-[130px] h-[130px] object-cover shadow-md rounded-full" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+                <div class="hidden md:block shrink-0">
+                    <img src="img/quick-icon.png" class="w-[100px] transform rotate-180" alt="">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#252525] text-white mt-5 py-16 px-6 font-sans">
+        <div class="max-w-7xl mx-auto">
+            <div
+                class="flex flex-col md:flex-row items-start md:items-center justify-end gap-6 mb-12 text-sm text-gray-300">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-location-dot text-[#fc95c4] text-lg"></i>
+                    <span>Making this the first true</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-phone text-[#fc95c4] text-lg"></i>
+                    <span>Call : +01 1234567890</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-envelope text-[#fc95c4] text-lg"></i>
+                    <span>Email : demo@gmail.com</span>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+                <div>
+                    <div class="mb-8">
+                        <h2 class="text-3xl font-semibold mb-2 tracking-wide">Contact Us</h2>
+                        <hr class="border-gray-500 w-36 border-[1px]" />
+                    </div>
+
+                    <form class="space-y-6">
+                        <div>
+                            <input type="text" placeholder="NAME"
+                                class="w-full bg-transparent border-b border-gray-500 pb-2 text-sm outline-none focus:border-[#fc95c4] transition placeholder-gray-400" />
+                        </div>
+                        <div>
+                            <input type="email" placeholder="EMAIL"
+                                class="w-full bg-transparent border-b border-gray-500 pb-2 text-sm outline-none focus:border-[#fc95c4] transition placeholder-gray-400" />
+                        </div>
+                        <div>
+                            <input type="text" placeholder="PHONE NUMBER"
+                                class="w-full bg-transparent border-b border-gray-500 pb-2 text-sm outline-none focus:border-[#fc95c4] transition placeholder-gray-400" />
+                        </div>
+                        <div>
+                            <textarea placeholder="MESSAGE" rows="2"
+                                class="w-full bg-transparent border-b border-gray-500 pb-2 text-sm outline-none focus:border-[#fc95c4] transition placeholder-gray-400 resize-none"></textarea>
+                        </div>
+                        <p class="inline-block pt-2">
+                            <a href="#"
+                                class="inline-block bg-[#fc95c4] text-white font-medium uppercase text-sm tracking-wider py-3 px-12 transition-all duration-300 hover:bg-white hover:text-black">
+                                Send
+                            </a>
+                        </p>
+                    </form>
+                </div>
+                <div class="flex flex-col justify-between pt-4">
+                    <div>
+                        <h3 class="text-lg font-medium mb-4 text-gray-200">Newsletter</h3>
+                        <div class="flex w-full max-w-md">
+                            <input type="email" placeholder="ENTER YOUR EMAIL"
+                                class="w-full bg-white text-black px-4 py-3 text-sm outline-none placeholder-gray-500" />
+                            <p class="shrink-0">
+                                <a href="#"
+                                    class="inline-block bg-[#fc95c4] text-white font-medium uppercase text-xs tracking-wider py-4 px-6 transition-all duration-300 hover:bg-white hover:text-black h-full flex items-center justify-center">
+                                    Subscribe
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3 mt-12 lg:mt-0 justify-start lg:justify-end">
+                        <p>
+                            <a href="#"
+                                class="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center transition-all duration-300 hover:bg-[#fc95c4] hover:text-white">
+                                <i class="fa-brands fa-facebook-f text-sm"></i>
+                            </a>
+                        </p>
+                        <p>
+                            <a href="#"
+                                class="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center transition-all duration-300 hover:bg-[#fc95c4] hover:text-white">
+                                <i class="fa-brands fa-twitter text-sm"></i>
+                            </a>
+                        </p>
+                        <p>
+                            <a href="#"
+                                class="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center transition-all duration-300 hover:bg-[#fc95c4] hover:text-white">
+                                <i class="fa-brands fa-linkedin-in text-sm"></i>
+                            </a>
+                        </p>
+                        <p>
+                            <a href="#"
+                                class="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center transition-all duration-300 hover:bg-[#fc95c4] hover:text-white">
+                                <i class="fa-brands fa-instagram text-sm"></i>
+                            </a>
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + '">' + (index + 1) + "</span>";
+                },
+            },
+        });
+
+        var swiper = new Swiper(".mySwiper", {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+</body>
+
+</html>
