@@ -11,6 +11,12 @@
     <link href="src/output.css" rel="stylesheet">
     <title>Romyk</title>
     <style>
+        .menubarsopen {
+            top: -5000%;
+            transition: .3s ease;
+
+        }
+
         header {
             background: url(img/banner-bg.png);
             width: 100%;
@@ -99,7 +105,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="pt-4">
+                <div class=" pt-4">
                     <ul class="flex items-center gap-6 text-[20px]">
                         <li><a href="" class="hover:text-[#fc95c4] text-[#fc95c4] pb-6.5 mt-1 inline-block">Home</a>
                         </li>
@@ -119,12 +125,30 @@
                 <div class="flex items-center gap-5 text-lg">
                     <a href="" class="hover:text-[#fc95c4]"><i class="fa-solid fa-magnifying-glass"></i></a>
                 </div>
+
             </div>
             <div class="mobil-menu h-16 lg:hidden flex items-center justify-between px-4">
                 <div class="logo w-28">
                     <img src="img/logo.png" alt="Romyk">
                 </div>
-                <a href="" class="text-lg p-1"><i class="fa-solid fa-bars"></i></a>
+                <a href="javascript:void(0)" i onclick="menuac()" class="text-lg p-1"><i
+                        class="fa-solid fa-bars"></i></a>
+            </div>
+            <div id="openmenu"
+                class="open-menu bg-amber-50 flex items-center flex-col fixed top-[-100%] left-0 w-full h-[100vh] z-50 transition-all duration-300">
+                <i onclick="closemenu()" class="fa-solid fa-x m-5"></i>
+                <ul class="flex items-center flex-col my-12  gap-5 text-2xl">
+                    <li><a href="" class="hover:text-[#fc95c4] text-[#fc95c4] pb-6.5 mt-1 inline-block">Home</a>
+                    </li>
+                    <li><a href="" class="hover:text-[#fc95c4] pb-6.5 mt-1 inline-block transition">About</a></li>
+                    <li><a href="" class="hover:text-[#fc95c4] pb-6.5 mt-1 inline-block transition">Icecream</a>
+                    </li>
+                    <li><a href="" class="hover:text-[#fc95c4] pb-6.5 mt-1 inline-block transition">Services</a>
+                    </li>
+                    <li><a href="" class="hover:text-[#fc95c4] pb-6.5 mt-1 inline-block transition">Blog</a></li>
+                    <li><a href="" class="hover:text-[#fc95c4] pb-6.5 mt-1 inline-block transition">Contact Us</a>
+                    </li>
+                </ul>
             </div>
             <div class="container mx-auto flex items-center justify-center my-2 lg:p-[80px] p-[30px]">
                 <div class="swiper mySwiper">
@@ -227,114 +251,17 @@
                     </div>
                     <p class="mt-2">tempor incididunt ut labore et dolore magna aliqua</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center w-full">
-                    <div class="relative shadow-2xl w-full max-w-[350px]">
-                        <div
-                            class="bg-[#f2f2f0] h-[300px] w-full p-5 hover:bg-[#faf0c7] flex items-center justify-center">
-                            <img src="img/img-1.png" class="max-w-full h-auto object-contain" alt="">
-                        </div>
-                        <div class="bg-white h-[150px] w-full py-5 flex flex-col items-center justify-center">
-                            <h3 class="text-2xl font-semibold text-center px-2">Strawberry Ice Cream</h3>
-                            <p class="inline-block mt-[30px]"><a href=""
-                                    class="border-2 py-2 px-[50px] border-[#fc95c4] text-[#fc95c4] hover:border-black hover:text-black !rounded-[50px]">Add
-                                    To Cart</a></p>
-                        </div>
-                        <div class="absolute bottom-[110px] left-1/2 -translate-x-1/2">
-                            <p
-                                class="inline-block rounded-[50%] h-[80px] w-[80px] text-3xl font-semibold text-center pt-4 bg-white shadow">
-                                $10</p>
-                        </div>
-                    </div>
-                    <div class="relative shadow-2xl w-full max-w-[350px]">
-                        <div
-                            class="bg-[#f2f2f0] h-[300px] w-full p-5 hover:bg-[#faf0c7] flex items-center justify-center">
-                            <img src="img/img-2.png" class="max-w-full h-auto object-contain" alt="">
-                        </div>
-                        <div class="bg-white h-[150px] w-full py-5 flex flex-col items-center justify-center">
-                            <h3 class="text-2xl font-semibold text-center px-2">Strawberry Ice Cream</h3>
-                            <p class="inline-block mt-[30px]"><a href=""
-                                    class="border-2 py-2 px-[50px] border-[#fc95c4] text-[#fc95c4] hover:border-black hover:text-black !rounded-[50px]">Add
-                                    To Cart</a></p>
-                        </div>
-                        <div class="absolute bottom-[110px] left-1/2 -translate-x-1/2">
-                            <p
-                                class="inline-block rounded-[50%] h-[80px] w-[80px] text-3xl font-semibold text-center pt-4 bg-white shadow">
-                                $10</p>
-                        </div>
-                    </div>
-                    <div class="relative shadow-2xl w-full max-w-[350px]">
-                        <div
-                            class="bg-[#f2f2f0] h-[300px] w-full p-5 hover:bg-[#faf0c7] flex items-center justify-center">
-                            <img src="img/img-1.png" class="max-w-full h-auto object-contain" alt="">
-                        </div>
-                        <div class="bg-white h-[150px] w-full py-5 flex flex-col items-center justify-center">
-                            <h3 class="text-2xl font-semibold text-center px-2">Strawberry Ice Cream</h3>
-                            <p class="inline-block mt-[30px]"><a href=""
-                                    class="border-2 py-2 px-[50px] border-[#fc95c4] text-[#fc95c4] hover:border-black hover:text-black !rounded-[50px]">Add
-                                    To Cart</a></p>
-                        </div>
-                        <div class="absolute bottom-[110px] left-1/2 -translate-x-1/2">
-                            <p
-                                class="inline-block rounded-[50%] h-[80px] w-[80px] text-3xl font-semibold text-center pt-4 bg-white shadow">
-                                $10</p>
-                        </div>
-                    </div>
-                    <div class="relative shadow-2xl w-full max-w-[350px]">
-                        <div
-                            class="bg-[#f2f2f0] h-[300px] w-full p-5 hover:bg-[#faf0c7] flex items-center justify-center">
-                            <img src="img/img-3.png" class="max-w-full h-auto object-contain" alt="">
-                        </div>
-                        <div class="bg-white h-[150px] w-full py-5 flex flex-col items-center justify-center">
-                            <h3 class="text-2xl font-semibold text-center px-2">Strawberry Ice Cream</h3>
-                            <p class="inline-block mt-[30px]"><a href=""
-                                    class="border-2 py-2 px-[50px] border-[#fc95c4] text-[#fc95c4] hover:border-black hover:text-black !rounded-[50px]">Add
-                                    To Cart</a></p>
-                        </div>
-                        <div class="absolute bottom-[110px] left-1/2 -translate-x-1/2">
-                            <p
-                                class="inline-block rounded-[50%] h-[80px] w-[80px] text-3xl font-semibold text-center pt-4 bg-white shadow">
-                                $10</p>
-                        </div>
-                    </div>
-                    <div class="relative shadow-2xl w-full max-w-[350px]">
-                        <div
-                            class="bg-[#f2f2f0] h-[300px] w-full p-5 hover:bg-[#faf0c7] flex items-center justify-center">
-                            <img src="img/img-4.png" class="max-w-full h-auto object-contain" alt="">
-                        </div>
-                        <div class="bg-white h-[150px] w-full py-5 flex flex-col items-center justify-center">
-                            <h3 class="text-2xl font-semibold text-center px-2">Strawberry Ice Cream</h3>
-                            <p class="inline-block mt-[30px]"><a href=""
-                                    class="border-2 py-2 px-[50px] border-[#fc95c4] text-[#fc95c4] hover:border-black hover:text-black !rounded-[50px]">Add
-                                    To Cart</a></p>
-                        </div>
-                        <div class="absolute bottom-[110px] left-1/2 -translate-x-1/2">
-                            <p
-                                class="inline-block rounded-[50%] h-[80px] w-[80px] text-3xl font-semibold text-center pt-4 bg-white shadow">
-                                $10</p>
-                        </div>
-                    </div>
-                    <div class="relative shadow-2xl w-full max-w-[350px]">
-                        <div
-                            class="bg-[#f2f2f0] h-[300px] w-full p-5 hover:bg-[#faf0c7] flex items-center justify-center">
-                            <img src="img/img-5.png" class="max-w-full h-auto object-contain" alt="">
-                        </div>
-                        <div class="bg-white h-[150px] w-full py-5 flex flex-col items-center justify-center">
-                            <h3 class="text-2xl font-semibold text-center px-2">Strawberry Ice Cream</h3>
-                            <p class="inline-block mt-[30px]"><a href=""
-                                    class="border-2 py-2 px-[50px] border-[#fc95c4] text-[#fc95c4] hover:border-black hover:text-black !rounded-[50px]">Add
-                                    To Cart</a></p>
-                        </div>
-                        <div class="absolute bottom-[110px] left-1/2 -translate-x-1/2">
-                            <p
-                                class="inline-block rounded-[50%] h-[80px] w-[80px] text-3xl font-semibold text-center pt-4 bg-white shadow">
-                                $10</p>
-                        </div>
-                    </div>
+
+                <div id="contain"
+                    class="contain grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center w-full">
                 </div>
+
                 <div class="mt-[50px] flex justify-center w-full">
-                    <p class="inline-block"><a href=""
-                            class="bg-[#fc95c4] py-3 hover:bg-black transition px-[50px] text-white rounded-xl">See
-                            More</a></p>
+                    <p class="inline-block">
+                        <a href="" class="bg-[#fc95c4] py-3 hover:bg-black transition px-[50px] text-white rounded-xl">
+                            See More
+                        </a>
+                    </p>
                 </div>
             </div>
         </section>
@@ -574,6 +501,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="Data.js"></script>
     <script>
         var swiper = new Swiper(".mySwiper", {
             spaceBetween: 30,
@@ -597,6 +525,15 @@
                 prevEl: ".swiper-button-prev",
             },
         });
+
+
+        let openmenu = document.getElementById('openmenu')
+        function menuac() {
+            openmenu.style.top = 0
+        }
+        function closemenu() {
+            openmenu.style.top = '-5000%'
+        }
     </script>
 </body>
 
